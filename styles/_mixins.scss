@@ -1,0 +1,67 @@
+// font-face rule mixin
+
+@mixin font-face($font-family) {
+  @font-face {
+    font-family: $font-family;
+    src: url("#{$font-path}/ttf/#{$font-family}.ttf") format("truetype");
+    src: url("#{$font-path}/woff/#{$font-family}.woff") format("woff");
+    src: url("#{$font-path}/woff2/#{$font-family}.woff2") format("woff2");
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: $font-family;
+    src: url("#{$font-path}/ttf/#{$font-family}_Bold.ttf") format("truetype");
+    src: url("#{$font-path}/woff/#{$font-family}_Bold.woff") format("woff");
+    src: url("#{$font-path}/woff2/#{$font-family}_Bold.woff2") format("woff2");
+    font-weight: bold;
+  }
+}
+
+@mixin flex-mixin(
+  $flex-direction: row,
+  $align-items: center,
+  $justify-content: center,
+  $gap: 20px
+) {
+  display: flex;
+  flex-direction: $flex-direction;
+  align-items: $align-items;
+  justify-content: $justify-content;
+  gap: $gap;
+  @content;
+}
+
+@mixin text-bg-color(
+  $text: inherit,
+  $text-hover: $text,
+  $bg: inherit,
+  $bg-hover: $bg
+) {
+  color: $text;
+  background-color: $bg;
+  &:hover {
+    color: $text-hover;
+    background-color: $bg-hover;
+  }
+}
+
+@mixin border-radius($radius: 5px) {
+  border-radius: $radius;
+}
+
+@mixin box-styling {
+  padding: 2rem;
+  @include border-radius;
+  font-size: 1.5rem;
+  text-align: justify;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  cursor: default;
+}
+
+// media query mixins
+
+@mixin mediaquery($brk-point) {
+  @media (max-width: $brk-point) {
+    @content;
+  }
+}
