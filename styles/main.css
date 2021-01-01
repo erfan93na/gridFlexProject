@@ -264,7 +264,7 @@ header nav ul li a:hover {
   width: 100%;
 }
 
-.modal .modal [type="submit"] {
+.modal [type="submit"] {
   color: white;
   font-family: inherit;
   font-weight: bolder;
