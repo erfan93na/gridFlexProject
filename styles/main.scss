@@ -169,6 +169,8 @@ header {
   row-gap: 20px;
   column-gap: 50px;
   grid-template-columns: 1fr 35%;
+  grid-template-rows: 200px 200px;
+
   grid-template-areas:
     "swiper-container top-image"
     "swiper-container bottom-image";
@@ -180,9 +182,12 @@ header {
   }
   .top-image {
     grid-area: top-image;
+    max-width: 300px;
   }
   .bottom-image {
     grid-area: bottom-image;
+    max-width: 300px;
+
   }
   .swiper-container {
     grid-area: swiper-container;

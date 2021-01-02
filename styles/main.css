@@ -311,6 +311,8 @@ header nav ul li a:hover {
           column-gap: 50px;
   -ms-grid-columns: 1fr 35%;
       grid-template-columns: 1fr 35%;
+  -ms-grid-rows: 200px 200px;
+      grid-template-rows: 200px 200px;
       grid-template-areas: "swiper-container top-image" "swiper-container bottom-image";
 }
 
@@ -331,12 +333,14 @@ header nav ul li a:hover {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: top-image;
+  max-width: 300px;
 }
 
 .top-box .bottom-image {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: bottom-image;
+  max-width: 300px;
 }
 
 .top-box .swiper-container {
