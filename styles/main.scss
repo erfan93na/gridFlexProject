@@ -169,7 +169,7 @@ header {
   row-gap: 20px;
   column-gap: 50px;
   grid-template-columns: 1fr 35%;
-  grid-template-rows: 200px 200px;
+  grid-template-rows: 180px 180px;
 
   grid-template-areas:
     "swiper-container top-image"
@@ -182,11 +182,9 @@ header {
   }
   .top-image {
     grid-area: top-image;
-    max-width: 300px;
   }
   .bottom-image {
     grid-area: bottom-image;
-    max-width: 300px;
 
   }
   .swiper-container {
@@ -197,16 +195,14 @@ header {
   }
   @include mediaquery($brk-small) {
     grid-template-columns: 1fr;
+    grid-template-rows: 30vmax 20vmax 20vmax;
+
     justify-content: center;
     grid-template-areas:
       "swiper-container"
       "top-image"
       "bottom-image";
-    .top-image,
-    .bottom-image {
-      width: 80%;
-      justify-self: center;
-    }
+   
     column-gap: 0px;
   }
 }
@@ -214,10 +210,29 @@ header {
 .middle-box {
   @include flex-mixin($justify-content: space-between, $align-items: stretch)
     ;& > div > div {
-    @include box-styling;
+      position: relative;
+      @include flex-mixin;
+    img {
+      width:100%;height:100%;
+      object-fit: cover;
+
+    }
+    .hover-div {
+       position:absolute;
+       width:100%;
+       height:100%;
+       top:0;
+       right:0;
+       display:none;
+       color:black;
+       background: rgba($color: #000000, $alpha: 0.5);
+
+    }
+    &:hover>.hover-div {@include flex-mixin;font-size:3rem}
   }
   .left-column {
-    @include flex-mixin($align-items: flex-start);
+    max-width:50%;
+    @include flex-mixin($align-items: stretch);
 
     div {
       @include text-bg-color(
@@ -227,7 +242,8 @@ header {
     }
     @include mediaquery($brk-small) {
       flex-direction: column;
-    }
+    };
+   
   }
   .right-column {
     min-width: 50%;
