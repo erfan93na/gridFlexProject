@@ -28,7 +28,7 @@ body {
   margin: 0;
   padding: 0;
   text-align: right;
-  background: #f1e8b8;
+  background: #e4e1d0;
 }
 
 a,
@@ -229,7 +229,7 @@ header nav ul li a:hover {
   cursor: pointer;
   border-radius: 5px;
   color: black;
-  background-color: #f1e8b8;
+  background-color: #e4e1d0;
   padding: 0.7rem 5rem;
   font-family: inherit;
   border: none;
@@ -379,9 +379,9 @@ header nav ul li a:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -478,8 +478,8 @@ header nav ul li a:hover {
   display: -ms-grid;
   display: grid;
   gap: 20px;
-  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
