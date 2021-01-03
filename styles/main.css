@@ -312,6 +312,8 @@ header nav ul li a:hover {
           column-gap: 50px;
   -ms-grid-columns: 1fr 35%;
       grid-template-columns: 1fr 35%;
+  -ms-grid-rows: 180px 180px;
+      grid-template-rows: 180px 180px;
       grid-template-areas: "swiper-container top-image" "swiper-container bottom-image";
 }
 
@@ -353,18 +355,14 @@ header nav ul li a:hover {
   .top-box {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+    -ms-grid-rows: 30vmax 20vmax 20vmax;
+        grid-template-rows: 30vmax 20vmax 20vmax;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
         grid-template-areas: "swiper-container" "top-image" "bottom-image";
     -webkit-column-gap: 0px;
             column-gap: 0px;
-  }
-  .top-box .top-image,
-  .top-box .bottom-image {
-    width: 80%;
-    -ms-grid-column-align: center;
-        justify-self: center;
   }
 }
 
@@ -386,16 +384,7 @@ header nav ul li a:hover {
 }
 
 .middle-box > div > div {
-  padding: 2rem;
-  border-radius: 5px;
-  font-size: 1.5rem;
-  text-align: justify;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  cursor: default;
-}
-
-.middle-box .left-column {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -403,9 +392,63 @@ header nav ul li a:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+}
+
+.middle-box > div > div img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.middle-box > div > div .hover-div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  display: none;
+  color: black;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.middle-box > div > div:hover > .hover-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+  font-size: 3rem;
+}
+
+.middle-box .left-column {
+  max-width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
