@@ -131,6 +131,7 @@ header nav:hover {
 }
 
 header nav ul {
+  max-width: 100%;
   color: inherit;
   background-color: inherit;
   display: -webkit-box;

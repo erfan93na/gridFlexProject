@@ -46,6 +46,8 @@ header {
 
     height: 100%;
     ul {
+      max-width:100%;
+
       @include text-bg-color;
 
       @include flex-mixin;
