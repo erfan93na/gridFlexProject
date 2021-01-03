@@ -313,8 +313,8 @@ header nav ul li a:hover {
           column-gap: 50px;
   -ms-grid-columns: 1fr 35%;
       grid-template-columns: 1fr 35%;
-  -ms-grid-rows: 150px 150px;
-      grid-template-rows: 150px 150px;
+  -ms-grid-rows: 130px 130px;
+      grid-template-rows: 130px 130px;
       grid-template-areas: "swiper-container top-image" "swiper-container bottom-image";
 }
 
@@ -391,6 +391,8 @@ header nav ul li a:hover {
 .middle-box > div > div {
   -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
           box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  -webkit-transition: background 0.5s;
+  transition: background 0.5s;
   border: 1px solid black;
   position: relative;
   display: -webkit-box;
@@ -424,7 +426,6 @@ header nav ul li a:hover {
   top: 0;
   right: 0;
   display: none;
-  background: rgba(0, 0, 0, 0.5);
 }
 
 .middle-box > div > div:hover > .hover-div {
@@ -443,6 +444,7 @@ header nav ul li a:hover {
           justify-content: center;
   gap: 20px;
   font-size: 2rem;
+  text-shadow: 1px 1px 19px white;
 }
 
 .middle-box .left-column {
@@ -470,7 +472,7 @@ header nav ul li a:hover {
 
 .middle-box .left-column div:hover {
   color: white;
-  background-color: rgba(228, 226, 214, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .middle-box .right-column {
@@ -498,7 +500,7 @@ header nav ul li a:hover {
 
 .middle-box .right-column div:hover {
   color: white;
-  background-color: rgba(208, 83, 83, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 @media (max-width: 1024px) {
@@ -517,8 +519,8 @@ header nav ul li a:hover {
   display: -ms-grid;
   display: grid;
   gap: 20px;
-  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  -ms-grid-columns: (minmax(200px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;

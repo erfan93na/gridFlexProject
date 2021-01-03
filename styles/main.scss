@@ -175,7 +175,7 @@ header {
   row-gap: 20px;
   column-gap: 50px;
   grid-template-columns: 1fr 35%;
-  grid-template-rows: 150px 150px;
+  grid-template-rows: 130px 130px;
 
   grid-template-areas:
     "swiper-container top-image"
@@ -218,7 +218,7 @@ header {
 
     & > div {
       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-
+      transition:background 0.5s;
       border: 1px solid black;
 
       position: relative;
@@ -236,12 +236,11 @@ header {
         top: 0;
         right: 0;
         display: none;
-        background: rgba($color: #000000, $alpha: 0.5);
       }
       &:hover > .hover-div {
         @include flex-mixin;
         font-size: 2rem;
-      }
+        text-shadow: 1px 1px 19px rgba(255, 255, 255, 1);     }
     }
   }
   .left-column {
@@ -252,7 +251,7 @@ header {
       @include text-bg-color(
         $text: white,
         $bg: $secondary-light,
-        $bg-hover: rgba($secondary-light, 0.5)
+        $bg-hover: rgba(black, 0.5)
       );
     }
     @include mediaquery($brk-small) {
@@ -272,7 +271,7 @@ header {
       @include text-bg-color(
         $bg: $secondary-light,
         $text: white,
-        $bg-hover: rgba($secondary-dark, 0.5)
+        $bg-hover: rgba(black, 0.5)
       );
     }
   }
@@ -287,7 +286,7 @@ header {
 .bottom-box {
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   justify-content: center;
 
   @for $i from 1 through 4 {
