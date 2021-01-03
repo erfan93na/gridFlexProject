@@ -28,7 +28,7 @@ body {
   margin: 0;
   padding: 0;
   text-align: right;
-  background: #e4e1d0;
+  background: #e9e6d5;
 }
 
 a,
@@ -230,7 +230,7 @@ header nav ul li a:hover {
   cursor: pointer;
   border-radius: 5px;
   color: black;
-  background-color: #e4e1d0;
+  background-color: #e9e6d5;
   padding: 0.7rem 5rem;
   font-family: inherit;
   border: none;
@@ -238,7 +238,7 @@ header nav ul li a:hover {
 
 .signin-button:hover {
   color: black;
-  background-color: #f9e784;
+  background-color: #e4e2d6;
 }
 
 .signin-button:focus ~ .overlay,
@@ -303,6 +303,7 @@ header nav ul li a:hover {
 }
 
 .top-box {
+  padding: 15px 50px;
   margin-top: 6rem;
   width: 100%;
   display: -ms-grid;
@@ -312,8 +313,8 @@ header nav ul li a:hover {
           column-gap: 50px;
   -ms-grid-columns: 1fr 35%;
       grid-template-columns: 1fr 35%;
-  -ms-grid-rows: 180px 180px;
-      grid-template-rows: 180px 180px;
+  -ms-grid-rows: 150px 150px;
+      grid-template-rows: 150px 150px;
       grid-template-areas: "swiper-container top-image" "swiper-container bottom-image";
 }
 
@@ -383,7 +384,14 @@ header nav ul li a:hover {
   gap: 20px;
 }
 
+.middle-box > div {
+  height: 250px;
+}
+
 .middle-box > div > div {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border: 1px solid black;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -402,16 +410,17 @@ header nav ul li a:hover {
 }
 
 .middle-box > div > div img {
+  -o-object-fit: contain;
+     object-fit: contain;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .middle-box > div > div .hover-div {
   position: absolute;
   width: 100%;
   height: 100%;
+  padding: 1rem;
   top: 0;
   right: 0;
   display: none;
@@ -434,11 +443,10 @@ header nav ul li a:hover {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 20px;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .middle-box .left-column {
-  max-width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -456,26 +464,17 @@ header nav ul li a:hover {
 }
 
 .middle-box .left-column div {
+  height: 100%;
   color: inherit;
-  background-color: #f9e784;
+  background-color: #e4e2d6;
 }
 
 .middle-box .left-column div:hover {
   color: inherit;
-  background-color: rgba(249, 231, 132, 0.5);
-}
-
-@media (max-width: 768px) {
-  .middle-box .left-column {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
+  background-color: rgba(228, 226, 214, 0.5);
 }
 
 .middle-box .right-column {
-  min-width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -483,18 +482,19 @@ header nav ul li a:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   gap: 20px;
 }
 
 .middle-box .right-column div {
+  height: 25%;
   color: white;
-  background-color: #d05353;
+  background-color: #e4e2d6;
 }
 
 .middle-box .right-column div:hover {

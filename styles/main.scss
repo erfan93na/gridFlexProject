@@ -162,6 +162,7 @@ header {
 }
 
 .top-box {
+  padding:15px 50px;
   margin-top: 6rem;
   & * {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -171,7 +172,7 @@ header {
   row-gap: 20px;
   column-gap: 50px;
   grid-template-columns: 1fr 35%;
-  grid-template-rows: 180px 180px;
+  grid-template-rows: 150px 150px;
 
   grid-template-areas:
     "swiper-container top-image"
@@ -211,18 +212,26 @@ header {
 
 .middle-box {
   @include flex-mixin($justify-content: space-between, $align-items: stretch)
-    ;& > div > div {
+    ;& > div { 
+      height:250px;
+
+      &>div {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+        border:1px solid black;
+
       position: relative;
       @include flex-mixin;
     img {
-      width:100%;height:100%;
-      object-fit: cover;
-
+       object-fit: contain;
+       width:100%;
+       height:100%;
     }
     .hover-div {
        position:absolute;
        width:100%;
        height:100%;
+       padding:1rem;
        top:0;
        right:0;
        display:none;
@@ -230,35 +239,37 @@ header {
        background: rgba($color: #000000, $alpha: 0.5);
 
     }
-    &:hover>.hover-div {@include flex-mixin;font-size:3rem}
-  }
+    &:hover>.hover-div {@include flex-mixin;font-size:2rem}
+  }}
   .left-column {
-    max-width:50%;
     @include flex-mixin($align-items: stretch);
 
     div {
+      height:100%;
       @include text-bg-color(
         $bg: $secondary-light,
         $bg-hover: rgba($secondary-light, 0.5)
       );
     }
-    @include mediaquery($brk-small) {
-      flex-direction: column;
-    };
+     @include mediaquery($brk-small) {
+    //   flex-direction: column;
+    //   align-content: stretch;
+    // };
    
-  }
+  }}
   .right-column {
-    min-width: 50%;
-    @include flex-mixin($flex-direction: column);
+    @include flex-mixin($flex-direction: column,$justify-content:space-between,$align-items:stretch);
     div {
+      height:25%;
       @include text-bg-color(
-        $bg: $secondary-dark,
+        $bg: $secondary-light,
         $text: white,
         $bg-hover: rgba($secondary-dark, 0.5)
       );
     }
   }
   @include mediaquery($brk-medium) {
+    
     flex-direction: column;
     & > div {
       width: 100%;
