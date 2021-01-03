@@ -28,7 +28,7 @@ body {
   margin: 0;
   padding: 0;
   text-align: right;
-  background: #e9e6d5;
+  background: #f8f5e4;
 }
 
 a,
@@ -230,7 +230,7 @@ header nav ul li a:hover {
   cursor: pointer;
   border-radius: 5px;
   color: black;
-  background-color: #e9e6d5;
+  background-color: #f8f5e4;
   padding: 0.7rem 5rem;
   font-family: inherit;
   border: none;
@@ -303,7 +303,7 @@ header nav ul li a:hover {
 }
 
 .top-box {
-  padding: 15px 50px;
+  padding: 20px 50px;
   margin-top: 6rem;
   width: 100%;
   display: -ms-grid;
