@@ -3,8 +3,6 @@
 @import "fonts";
 @import "basic-styling";
 
-
-
 body > div {
   max-width: 100%;
   padding: 6rem $h-padding;
@@ -30,7 +28,8 @@ body > div {
   }
 }
 header {
-  @include flex-mixin($justify-content: space-between) ;position: fixed;
+  @include flex-mixin($justify-content: space-between);
+  position: fixed;
   width: 100%;
   top: 0;
   right: 0;
@@ -46,7 +45,7 @@ header {
 
     height: 100%;
     ul {
-      max-width:100%;
+      max-width: 100%;
 
       @include text-bg-color;
 
@@ -67,10 +66,10 @@ header {
       }
       @include mediaquery($brk-small) {
         @include flex-mixin(
-            $flex-direction: column,
-            $justify-content: flex-start
-          );
-          position: absolute;
+          $flex-direction: column,
+          $justify-content: flex-start
+        );
+        position: absolute;
         right: 0px;
         height: 100vh;
         top: 6rem;
@@ -95,8 +94,13 @@ header {
   cursor: pointer;
 
   @include border-radius;
-  @include text-bg-color(black, black, $main-light, $bg-hover: $secondary-light)
-   ; padding: 0.7rem 5rem;
+  @include text-bg-color(
+    black,
+    black,
+    $main-light,
+    $bg-hover: $secondary-light
+  );
+  padding: 0.7rem 5rem;
   font-family: inherit;
   border: none;
 
@@ -124,7 +128,7 @@ header {
   height: 100%;
   width: 100%;
 
-   [type="submit"] {
+  [type="submit"] {
     color: white;
     font-family: inherit;
     font-weight: bolder;
@@ -157,12 +161,11 @@ header {
         border: none;
       }
     }
-    
   }
 }
 
 .top-box {
-  padding:15px 50px;
+  padding: 15px 50px;
   margin-top: 6rem;
   & * {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -188,13 +191,11 @@ header {
   }
   .bottom-image {
     grid-area: bottom-image;
-
   }
   .swiper-container {
     grid-area: swiper-container;
     width: 100%;
     height: 100%;
-    
   }
   @include mediaquery($brk-small) {
     grid-template-columns: 1fr;
@@ -205,62 +206,69 @@ header {
       "swiper-container"
       "top-image"
       "bottom-image";
-   
+
     column-gap: 0px;
   }
 }
 
 .middle-box {
-  @include flex-mixin($justify-content: space-between, $align-items: stretch)
-    ;& > div { 
-      height:250px;
+  @include flex-mixin($justify-content: space-between, $align-items: stretch);
+  & > div {
+    height: 250px;
 
-      &>div {
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    & > div {
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
-        border:1px solid black;
+      border: 1px solid black;
 
       position: relative;
       @include flex-mixin;
-    img {
-       object-fit: contain;
-       width:100%;
-       height:100%;
+      img {
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+      }
+      .hover-div {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        padding: 1rem;
+        top: 0;
+        right: 0;
+        display: none;
+        background: rgba($color: #000000, $alpha: 0.5);
+      }
+      &:hover > .hover-div {
+        @include flex-mixin;
+        font-size: 2rem;
+      }
     }
-    .hover-div {
-       position:absolute;
-       width:100%;
-       height:100%;
-       padding:1rem;
-       top:0;
-       right:0;
-       display:none;
-       color:black;
-       background: rgba($color: #000000, $alpha: 0.5);
-
-    }
-    &:hover>.hover-div {@include flex-mixin;font-size:2rem}
-  }}
+  }
   .left-column {
     @include flex-mixin($align-items: stretch);
 
     div {
-      height:100%;
+      height: 100%;
       @include text-bg-color(
+        $text: white,
         $bg: $secondary-light,
         $bg-hover: rgba($secondary-light, 0.5)
       );
     }
-     @include mediaquery($brk-small) {
-    //   flex-direction: column;
-    //   align-content: stretch;
-    // };
-   
-  }}
+    @include mediaquery($brk-small) {
+      //   flex-direction: column;
+      //   align-content: stretch;
+      // };
+    }
+  }
   .right-column {
-    @include flex-mixin($flex-direction: column,$justify-content:space-between,$align-items:stretch);
+    @include flex-mixin(
+      $flex-direction: column,
+      $justify-content: space-between,
+      $align-items: stretch
+    );
     div {
-      height:25%;
+      height: 25%;
       @include text-bg-color(
         $bg: $secondary-light,
         $text: white,
@@ -269,7 +277,6 @@ header {
     }
   }
   @include mediaquery($brk-medium) {
-    
     flex-direction: column;
     & > div {
       width: 100%;

@@ -424,7 +424,6 @@ header nav ul li a:hover {
   top: 0;
   right: 0;
   display: none;
-  color: black;
   background: rgba(0, 0, 0, 0.5);
 }
 
@@ -465,12 +464,12 @@ header nav ul li a:hover {
 
 .middle-box .left-column div {
   height: 100%;
-  color: inherit;
+  color: white;
   background-color: #e4e2d6;
 }
 
 .middle-box .left-column div:hover {
-  color: inherit;
+  color: white;
   background-color: rgba(228, 226, 214, 0.5);
 }
 
